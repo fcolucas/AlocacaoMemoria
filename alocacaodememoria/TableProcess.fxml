@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="539" prefWidth="648.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="alocacaodememoria.TableProcessController">
+    <TableView fx:id="tabProcessos" prefHeight="539.0" prefWidth="684.0">
+        <columns>
+            <TableColumn fx:id="colId" prefWidth="44.0" text="ID" />
+            <TableColumn fx:id="colTamanho" prefWidth="66.0" text="Tamanho" />
+            <TableColumn fx:id="colPorcent" prefWidth="86.0" text="\% Memória" />
+            <TableColumn fx:id="colInstCriado" prefWidth="83.0" text="Inst. Criado" />
+            <TableColumn fx:id="colInstAlocado" prefWidth="89.0" text="Inst. Alocado" />
+            <TableColumn fx:id="colDuracao" prefWidth="59.0" text="Duração" />
+            <TableColumn fx:id="colInstConcluido" prefWidth="97.0" text="Inst. Concluido" />
+            <TableColumn fx:id="colTEspera" prefWidth="87.0" text="Tempo Espera" />
+            <TableColumn fx:id="colStatus" prefWidth="72.0" text="Status" />
+        </columns>
+    </TableView>
+</AnchorPane>

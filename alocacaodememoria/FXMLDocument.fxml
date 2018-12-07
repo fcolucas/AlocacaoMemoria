@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="539.0" prefWidth="600" style="-fx-background-image: url('/imagem/fortaleza.png'); -fx-background-repeat: no-repeat; -fx-background-attachment: fixed; -fx-background-position: center; " xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alocacaodememoria.FXMLDocumentController">
+    <children>
+      <Pane fx:id="paneMem" prefHeight="580.0" prefWidth="650.0">
+         <children>
+            <TextField fx:id="tamMem" layoutX="150.0" layoutY="303.0" prefHeight="25.0" prefWidth="55.0" text="4500" />
+            <TextField fx:id="tamSO" layoutX="307.0" layoutY="303.0" prefHeight="25.0" prefWidth="55.0" text="600" />
+            <TextField fx:id="tamProc1" layoutX="307.0" layoutY="350.0" prefHeight="25.0" prefWidth="55.0" text="70" />
+            <TextField fx:id="tamProc2" layoutX="307.0" layoutY="372.0" prefHeight="25.0" prefWidth="55.0" text="550" />
+            <TextField fx:id="tCriacao1" layoutX="307.0" layoutY="408.0" prefHeight="25.0" prefWidth="55.0" text="3" />
+            <TextField fx:id="tCriacao2" layoutX="307.0" layoutY="430.0" prefHeight="25.0" prefWidth="55.0" text="11" />
+            <TextField fx:id="tDuracao1" layoutX="307.0" layoutY="467.0" prefHeight="25.0" prefWidth="55.0" text="10" />
+            <TextField fx:id="tDuracao2" layoutX="307.0" layoutY="492.0" prefHeight="25.0" prefWidth="55.0" text="20" />
+            <Label layoutX="17.0" layoutY="306.0" text="Tamanho da Memória:" textFill="#f20c0c">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="217.0" layoutY="306.0" text="Espaço do SO:" textFill="#f20c0c">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="160.0" layoutY="363.0" text="Tamanho dos Processos:" textFill="#f20c0c">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="105.0" layoutY="421.0" text="Tempo de Criação dos Processos:" textFill="#f20c0c">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtLog" layoutX="374.0" layoutY="302.0" prefHeight="262.0" prefWidth="261.0" />
+            <Label layoutX="103.0" layoutY="483.0" text="Tempo de Duração dos Processos:" textFill="#f20c0c">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="182.0" prefHeight="18.0" prefWidth="123.0" text="Instante:" textFill="#310de8">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="iniciarSimulacao" layoutX="111.0" layoutY="520.0" mnemonicParsing="false" onAction="#iniciar" prefHeight="46.0" prefWidth="152.0" style="-fx-background-color: blue;" text="Iniciar Simulação" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+            </Button>
+            <Label fx:id="instante" layoutX="107.0" layoutY="178.0" prefHeight="37.0" prefWidth="85.0" text="0" textFill="#310de8">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="504.0" layoutY="245.0" prefHeight="37.0" prefWidth="83.0" text="Média:" textFill="#310de8">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="513.0" layoutY="178.0" prefHeight="37.0" prefWidth="65.0" text="CPU:" textFill="#310de8">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="media" layoutX="568.0" layoutY="245.0" prefHeight="37.0" prefWidth="73.0" text="0" textFill="#310de8">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="cpu" layoutX="515.0" layoutY="210.0" prefHeight="37.0" prefWidth="123.0" text="0" textAlignment="CENTER" textFill="#310de8">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imgMemoria" fitHeight="137.0" fitWidth="650.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../imagem/MemoriaRAM.png" />
+               </image>
+            </ImageView>
+            <Label layoutY="137.0" text="0" textFill="#eb0404">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="50.0" layoutY="137.0" text="50" textFill="#eb0404">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="100.0" layoutY="137.0" text="100" textFill="#eb0404">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="150.0" layoutY="137.0" text="150" textFill="#eb0404">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="200.0" layoutY="137.0" text="200" textFill="#eb0404">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="300.0" layoutY="137.0" text="300" textFill="#eb0404">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="250.0" layoutY="137.0" text="250" textFill="#eb0404">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="400.0" layoutY="137.0" text="400" textFill="#eb0404">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="350.0" layoutY="138.0" text="350" textFill="#eb0404">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="500.0" layoutY="137.0" text="500" textFill="#eb0404">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="450.0" layoutY="137.0" text="450" textFill="#eb0404">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="550.0" layoutY="137.0" text="550" textFill="#eb0404">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="338.0" prefHeight="19.0" prefWidth="115.0" text="Qte de Processos:" textFill="#f20c0c">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="qteProcessos" layoutX="133.0" layoutY="335.0" prefHeight="25.0" prefWidth="55.0" text="15" />
+            <RadioButton fx:id="firstFit" layoutX="15.0" layoutY="220.0" mnemonicParsing="false" selected="true" text="First Fit" textFill="#f20c0c">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="bestFit" layoutX="15.0" layoutY="242.0" mnemonicParsing="false" text="Best Fit" textFill="#f20c0c">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="worstFit" layoutX="15.0" layoutY="263.0" mnemonicParsing="false" text="Worst Fit" textFill="#f20c0c">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+            </RadioButton>
+            <Label layoutX="600.0" layoutY="137.0" text="600" textFill="#eb0404">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
